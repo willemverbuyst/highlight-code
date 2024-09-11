@@ -3,12 +3,15 @@ import "./style.css";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <h1>Highlighted HTML</h1>
-    <div class="main">
+    <header>
+      <h1>Highlighted HTML</h1>
+    </header>
+    <section class="btn">
       <button id="btn-highlight" type="button">HIGHLIGHT HTML</button>
+    </section>
+    <section>
       <pre><code id="html-text"></code></pre>
-    </div>
-    
+    </section>
   </div>
 `;
 

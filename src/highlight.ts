@@ -1,21 +1,25 @@
 const HTML_STRING = `
-  <div>
-    <h1>Title</h1>
-    <section>
-      <p>This is a paragraph.</p>
-      <ul>
-        <li>List item 1</li>
-        <li>List item 2</li>
-      </ul>
-    </section>
-  </div>
+  <body>
+    <header>
+      <h1>Title</h1>
+    </header>
+    <main>
+      <section>
+        <p>This is a paragraph!</p>
+      </section>
+      <section>
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+        </ul>
+      </section>
+    </main>
+  </body>
 `;
 
 export function highlightTags() {
-  // First, escape the "<" and ">" characters
-  const output = HTML_STRING.replace(/</g, "&lt;") // Escape "<"
-    .replace(/>/g, "&gt;") // Escape ">"
-    // Match and wrap all tags (opening and closing) with <span class="html-tag">
+  const output = HTML_STRING.replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
     .replace(/(&lt;\/?[\w-]+&gt;)/g, '<span class="html-tag">$1</span>');
 
   const textField = document.querySelector<HTMLElement>("#html-text");
