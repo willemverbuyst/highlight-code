@@ -97,3 +97,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+pre {
+  font-size: 2rem;
+}
+
+.html-tag {
+  color: aqua;
+}
