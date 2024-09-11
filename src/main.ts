@@ -1,24 +1,15 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import { setupButtonAll, setupButtonTop } from "./button";
+import "./style.css";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
+    <h1>Highlighted HTML</h1>
     <div class="card">
-      <button id="counter" type="button"></button>
+      <button id="btn-top" type="button">TOP LEVEL HTML</button>
+      <button id="btn-all" type="button">ALL HTML ELEMENTS</button>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupButtonAll(document.querySelector<HTMLButtonElement>("#btn-all")!);
+setupButtonTop(document.querySelector<HTMLButtonElement>("#btn-top")!);
