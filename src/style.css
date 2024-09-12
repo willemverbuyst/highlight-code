@@ -26,10 +26,16 @@ header {
   text-align: center;
 }
 
+#page-header {
+  color: orangered;
+  font-size: 3rem;
+}
+
 .btn {
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 1rem;
 }
 
 #app {

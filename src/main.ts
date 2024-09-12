@@ -1,18 +1,30 @@
-import { setupButton } from "./button";
+import { setupButtonHighlightHTML, setupButtonRegularHTML } from "./buttons";
+import { replaceSymbolsInHTMLForDisplay } from "./html-functions";
+import { HTML_STRING } from "./htmlString";
 import "./style.css";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <header>
-      <h1>Highlighted HTML</h1>
+      <h1 id="page-header">Highlight Code</h1>
     </header>
     <section class="btn">
-      <button id="btn-highlight" type="button">HIGHLIGHT HTML</button>
+      <button id="btn-regular" type="button">REGULAR HTML</button>
+      <button id="btn-highlight" type="button">HIGHLIGHTED HTML</button>
     </section>
     <section>
-      <pre><code id="html-text"></code></pre>
+      <pre>
+        <code id="html-text">
+          ${replaceSymbolsInHTMLForDisplay(HTML_STRING)}
+        </code>
+      </pre>
     </section>
   </div>
 `;
 
-setupButton(document.querySelector<HTMLButtonElement>("#btn-highlight")!);
+setupButtonHighlightHTML(
+  document.querySelector<HTMLButtonElement>("#btn-highlight")!
+);
+setupButtonRegularHTML(
+  document.querySelector<HTMLButtonElement>("#btn-regular")!
+);
