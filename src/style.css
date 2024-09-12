@@ -68,14 +68,17 @@ pre {
   font-size: 1.2rem;
 }
 
-.html-symbol {
+.html-symbol,
+.css-brace {
   color: rgb(255, 165, 0);
 }
 
-.html-element {
+.html-element,
+.css-value {
   color: rgb(9, 125, 125);
 }
 
-.html-attribute {
-  color: rgb(235, 147, 162);
+.html-attribute,
+.css-selector {
+  color: rgb(229, 93, 116);
 }

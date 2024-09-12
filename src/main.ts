@@ -1,4 +1,5 @@
 import {
+  setupButtonHighlightCSS,
   setupButtonHighlightHTML,
   setupButtonRegularCSS,
   setupButtonRegularHTML,
@@ -14,6 +15,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       <button id="btn-regular-html" type="button">REGULAR HTML</button>
       <button id="btn-highlight-html" type="button">HIGHLIGHTED HTML</button>
       <button id="btn-regular-css" type="button">REGULAR CSS</button>
+      <button id="btn-highlight-css" type="button">HIGHLIGHT CSS</button>
     </section>
     <section>
       <pre>
@@ -32,4 +34,7 @@ setupButtonRegularHTML(
 );
 setupButtonRegularCSS(
   document.querySelector<HTMLButtonElement>("#btn-regular-css")!
+);
+setupButtonHighlightCSS(
+  document.querySelector<HTMLButtonElement>("#btn-highlight-css")!
 );
