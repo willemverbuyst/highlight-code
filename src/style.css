@@ -26,11 +26,6 @@ header {
   text-align: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 .btn {
   width: 100%;
   display: flex;
@@ -68,7 +63,7 @@ pre {
 }
 
 .html-symbol {
-  color: orange;
+  color: rgb(255, 165, 0);
 }
 
 .html-element {
