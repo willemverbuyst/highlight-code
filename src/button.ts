@@ -1,5 +1,5 @@
-import { highlightTags } from "./highlight";
+import { highlightHTML } from "./highlight";
 
 export function setupButton(element: HTMLButtonElement) {
-  element.addEventListener("click", () => highlightTags());
+  element.addEventListener("click", () => highlightHTML());
 }

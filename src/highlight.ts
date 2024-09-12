@@ -17,7 +17,7 @@ const HTML_STRING = `
   </body>
 `;
 
-export function highlightTags() {
+export function highlightHTML() {
   const output = HTML_STRING.replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/(&lt;\/?)([\w-]+)([\s\S]*?)(&gt;)/g, (_match, p1, p2, p3, p4) => {
