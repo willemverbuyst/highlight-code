@@ -64,9 +64,17 @@ button:focus-visible {
 }
 
 pre {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
-.html-tag {
-  color: #822020;
+.html-symbol {
+  color: orange;
+}
+
+.html-element {
+  color: rgb(9, 125, 125);
+}
+
+.html-attribute {
+  color: rgb(235, 147, 162);
 }
