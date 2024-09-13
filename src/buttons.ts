@@ -1,24 +1,22 @@
-import { highlightCSS, resetCSS } from "./css-functions";
-import { CSS_STRING } from "./cssString";
-import { highlightHTML, resetHTML } from "./html-functions";
-import { HTML_STRING } from "./htmlString";
+import { highlightCSS } from "./css-functions";
+import { highlightHTML } from "./html-functions";
 
-export function setupButtonHighlightHTML(element: HTMLButtonElement) {
+export function setupButtonHTML(element: HTMLButtonElement) {
   const textareaInput = document.querySelector<HTMLTextAreaElement>("#input");
 
   element.addEventListener("click", () =>
-    highlightHTML(textareaInput?.value ? textareaInput.value : "no html")
+    highlightHTML(
+      textareaInput?.value ? textareaInput.value : "nothing to highlight"
+    )
   );
 }
 
-export function setupButtonRegularHTML(element: HTMLButtonElement) {
-  element.addEventListener("click", () => resetHTML(HTML_STRING));
-}
+export function setupButtonCSS(element: HTMLButtonElement) {
+  const textareaInput = document.querySelector<HTMLTextAreaElement>("#input");
 
-export function setupButtonRegularCSS(element: HTMLButtonElement) {
-  element.addEventListener("click", () => resetCSS(CSS_STRING));
-}
-
-export function setupButtonHighlightCSS(element: HTMLButtonElement) {
-  element.addEventListener("click", () => highlightCSS(CSS_STRING));
+  element.addEventListener("click", () =>
+    highlightCSS(
+      textareaInput?.value ? textareaInput.value : "nothing to highlight"
+    )
+  );
 }
