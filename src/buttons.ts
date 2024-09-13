@@ -4,7 +4,11 @@ import { highlightHTML, resetHTML } from "./html-functions";
 import { HTML_STRING } from "./htmlString";
 
 export function setupButtonHighlightHTML(element: HTMLButtonElement) {
-  element.addEventListener("click", () => highlightHTML(HTML_STRING));
+  const textareaInput = document.querySelector<HTMLTextAreaElement>("#input");
+
+  element.addEventListener("click", () =>
+    highlightHTML(textareaInput?.value ? textareaInput.value : "no html")
+  );
 }
 
 export function setupButtonRegularHTML(element: HTMLButtonElement) {
