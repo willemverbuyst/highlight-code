@@ -1,22 +1,23 @@
-import { setupButtonCSS, setupButtonHTML } from "./buttons";
+import { setupTextField } from "./dom";
 import "./style.css";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <header>
     <h1 id="page-header">Highlight Code</h1>
   </header>
-  <section id="text-area">
-    <textarea id="input"></textarea>
-    <div id="output"readonly>
-      <pre><code id="code-text"></code></pre>
+  <section id="code-language-group" class="radio-section">
+    <input type="radio" id="html" name="code-language" value="HTML" checked="checked">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="code-language" value="CSS">
+    <label for="css">CSS</label><br>
+  </section>
+  <section id="text-fields">
+    <textarea id="input" placeholder="add your code here"></textarea>
+    <div id="output" readonly>
+      <pre><code id="code-text"><span class="placeholder">output</span></code></pre>
     </div>
   </section>
-  <section class="btn-section">
-    <button id="btn-html" type="button">HTML</button>
-    <button id="btn-css" type="button">CSS</button>
-  </section>
+  
 `;
 
-setupButtonHTML(document.querySelector<HTMLButtonElement>("#btn-html")!);
-
-setupButtonCSS(document.querySelector<HTMLButtonElement>("#btn-css")!);
+setupTextField();
