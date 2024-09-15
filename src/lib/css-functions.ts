@@ -1,10 +1,3 @@
-export function resetCSS(cssString: string) {
-  const output = cssString;
-
-  const textField = document.querySelector<HTMLElement>("#code-text");
-  if (textField) textField.innerHTML = output;
-}
-
 export function highlightCSS(cssString: string) {
   const output = cssString
     .replace(/([.#]?\w[\w-]*)\s*{/g, '<span class="css-selector">$1</span> {')

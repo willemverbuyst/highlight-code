@@ -4,13 +4,6 @@ export function replaceSymbolsInHTMLForDisplay(htmlString: string) {
   );
 }
 
-export function resetHTML(htmlString: string) {
-  const output = replaceSymbolsInHTMLForDisplay(htmlString);
-
-  const textField = document.querySelector<HTMLElement>("#code-text");
-  if (textField) textField.innerHTML = output;
-}
-
 export function highlightHTML(htmlString: string) {
   const output = replaceSymbolsInHTMLForDisplay(htmlString).replace(
     /(&lt;\/?)([\w-]+)([\s\S]*?)(&gt;)/g,
