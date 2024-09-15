@@ -1,7 +1,7 @@
 export const HTML_STRING = `
 <body>
   <header>
-    <h1 class="title">Title</h1>
+    <h1 class="title" id="page-title">Title</h1>
   </header>
   <main>
     <section>
