@@ -1,5 +1,5 @@
-import { highlightCSS } from "./css-functions";
-import { highlightHTML } from "./html-functions";
+import { highlightCSS } from "../lib/css-functions";
+import { highlightHTML } from "../lib/html-functions";
 
 export function setupTextField() {
   const textareaInput = document.querySelector<HTMLTextAreaElement>("#input");

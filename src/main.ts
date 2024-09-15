@@ -1,5 +1,5 @@
-import { setupTextField } from "./dom";
 import "./style.css";
+import { setupTextField } from "./ui/dom";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <header>
