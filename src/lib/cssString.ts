@@ -9,7 +9,7 @@ header {
 }
 
 #page-header {
-  color: orangered;
+  color: pink;
   font-size: 3rem;
 }
 
