@@ -1,5 +1,7 @@
 export function replaceSymbolsInHTMLForDisplay(htmlString: string) {
-  return htmlString.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return htmlString.replace(/[<>]/g, (match) =>
+    match === "<" ? "&lt;" : "&gt;"
+  );
 }
 
 export function resetHTML(htmlString: string) {
