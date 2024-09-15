@@ -16,9 +16,15 @@ export function setupTextField() {
 
   textareaInput?.addEventListener("input", () => {
     if (codeLanguage === "HTML") {
-      highlightHTML(textareaInput?.value);
+      const output = highlightHTML(textareaInput?.value);
+
+      const textField = document.querySelector<HTMLElement>("#code-text");
+      if (textField) textField.innerHTML = output;
     } else {
-      highlightCSS(textareaInput?.value);
+      const output = highlightCSS(textareaInput?.value);
+
+      const textField = document.querySelector<HTMLElement>("#code-text");
+      if (textField) textField.innerHTML = output;
     }
   });
 }

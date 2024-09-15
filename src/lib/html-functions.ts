@@ -5,7 +5,7 @@ export function replaceSymbolsInHTMLForDisplay(htmlString: string) {
 }
 
 export function highlightHTML(htmlString: string) {
-  const output = replaceSymbolsInHTMLForDisplay(htmlString).replace(
+  return replaceSymbolsInHTMLForDisplay(htmlString).replace(
     /(&lt;\/?)([\w-]+)([\s\S]*?)(&gt;)/g,
     (_match, p1, p2, p3, p4) => {
       const attrHighlight = p3.replace(
@@ -15,7 +15,4 @@ export function highlightHTML(htmlString: string) {
       return `<span class="html-symbol">${p1}</span><span class="html-element">${p2}</span>${attrHighlight}<span class="html-symbol">${p4}</span>`;
     }
   );
-
-  const textField = document.querySelector<HTMLElement>("#code-text");
-  if (textField) textField.innerHTML = output;
 }
