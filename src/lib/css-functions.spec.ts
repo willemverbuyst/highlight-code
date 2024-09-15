@@ -17,17 +17,24 @@ describe("highlightCSS", () => {
 
   test("highlights CSS with class and Id selectors", () => {
     const inputCSS =
-      "#header { background-color: blue; } .container { margin: 10px; }";
+      "#header { background-color: blue; } .container { margin: 10px; } span { color: #000; }";
     const result = highlightCSS(inputCSS);
 
     const expectedOutput =
-      '<span class="css-selector">#header</span> <span class="css-brace">{</span> ' +
+      '<span class="css-selector">#header</span> ' +
+      '<span class="css-brace">{</span> ' +
       '<span class="css-property">background-color</span>: ' +
       '<span class="css-value">blue</span>; ' +
       '<span class="css-brace">}</span> ' +
-      '<span class="css-selector">.container</span> <span class="css-brace">{</span> ' +
+      '<span class="css-selector">.container</span> ' +
+      '<span class="css-brace">{</span> ' +
       '<span class="css-property">margin</span>: ' +
       '<span class="css-value">10px</span>; ' +
+      '<span class="css-brace">}</span> ' +
+      '<span class="css-selector">span</span> ' +
+      '<span class="css-brace">{</span> ' +
+      '<span class="css-property">color</span>: ' +
+      '<span class="css-value">#000</span>; ' +
       '<span class="css-brace">}</span>';
 
     expect(result).toBe(expectedOutput);
