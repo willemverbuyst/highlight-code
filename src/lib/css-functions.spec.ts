@@ -59,7 +59,26 @@ describe("highlightCSS", () => {
     const inputCSS = "";
     const result = highlightCSS(inputCSS);
 
-    // The result should be an empty string
     expect(result).toBe("");
+  });
+
+  test("handles nested css", () => {
+    const inputCSS =
+      "header { background-color: blue; h1 { font-size: 2rem; } }";
+    const result = highlightCSS(inputCSS);
+
+    const expectedOutput =
+      '<span class="css-selector">header</span> ' +
+      '<span class="css-brace">{</span> ' +
+      '<span class="css-property">background-color</span>: ' +
+      '<span class="css-value">blue</span>; ' +
+      '<span class="css-selector">h1</span> ' +
+      '<span class="css-brace">{</span> ' +
+      '<span class="css-property">font-size</span>: ' +
+      '<span class="css-value">2rem</span>; ' +
+      '<span class="css-brace">}</span> ' +
+      '<span class="css-brace">}</span>';
+
+    expect(result).toBe(expectedOutput);
   });
 });

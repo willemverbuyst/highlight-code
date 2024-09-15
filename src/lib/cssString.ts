@@ -2,6 +2,10 @@ export const CSS_STRING = `
 header {
   width: 100%;
   text-align: center;
+
+  h1 {
+    color: orangered;
+  }
 }
 
 #page-header {
