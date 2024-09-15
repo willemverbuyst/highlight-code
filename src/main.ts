@@ -3,7 +3,7 @@ import { setupTextField } from "./ui/dom";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <header>
-    <h1 id="page-header">Highlight Code</h1>
+    <h1>Highlight Code</h1>
   </header>
   <section id="code-language-group" class="radio-section">
     <input type="radio" id="html" name="code-language" value="HTML" checked="checked">
